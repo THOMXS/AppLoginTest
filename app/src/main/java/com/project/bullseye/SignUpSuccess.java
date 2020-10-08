@@ -15,7 +15,6 @@ public class SignUpSuccess extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_success);
         Button btnAbout = (Button) findViewById(R.id.btn_about);
-
         Intent intentSignUp = getIntent();
         String name = intentSignUp.getStringExtra("Name");
 
@@ -24,7 +23,7 @@ public class SignUpSuccess extends AppCompatActivity {
 
         btnAbout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent telaSignUpSucess = new Intent(SignUpSuccess.this, About.class);
+                Intent telaSignUpSucess = new Intent(SignUpSuccess.this, Login.class);
                 startActivity(telaSignUpSucess);
             }
         });
