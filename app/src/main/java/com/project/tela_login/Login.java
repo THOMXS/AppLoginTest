@@ -1,4 +1,4 @@
-package com.project.bullseye;
+package com.project.tela_login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,12 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class Login extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
 
+public class Login extends AppCompatActivity {
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        mAuth = FirebaseAuth.getInstance();
 
         Button btnLogin = (Button) findViewById(R.id.btn_login);
 
@@ -32,5 +35,12 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+        @Override
+        public void onStart(){
+            super.onStart();
+            // Check if user is signed in (non-null) and update UI accordingly.
+            FirebaseUser currentUser = mAuth.getCurrentUser();
+            updateUI(currentUser);
+        }
     }
 }

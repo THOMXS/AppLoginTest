@@ -1,6 +1,6 @@
-package com.project.bullseye.data;
+package com.project.tela_login.data;
 
-import com.project.bullseye.data.model.LoggedInUser;
+import com.project.tela_login.data.model.LoggedInUser;
 
 import java.io.IOException;
 

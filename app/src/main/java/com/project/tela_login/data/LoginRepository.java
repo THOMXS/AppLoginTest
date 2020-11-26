@@ -1,6 +1,6 @@
-package com.project.bullseye.data;
+package com.project.tela_login.data;
 
-import com.project.bullseye.data.model.LoggedInUser;
+import com.project.tela_login.data.model.LoggedInUser;
 
 /**
  * Class that requests authentication and user information from the remote data source and

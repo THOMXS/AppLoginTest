@@ -1,4 +1,4 @@
-package com.project.bullseye.data;
+package com.project.tela_login.data;
 
 /**
  * A generic class that holds a result success w/ data or an error exception.
